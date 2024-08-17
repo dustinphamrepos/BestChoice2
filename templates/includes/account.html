@@ -1,0 +1,133 @@
+{% load static %}
+
+<ul class="list-group">
+  {% if active == 'info' %}
+    <a class="list-group-item active" href="{% url 'account_info' %}">
+      <i class="fa-solid fa-circle-info"></i>
+      &nbsp;
+      My information
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'account_info' %}">
+      <i class="fa-solid fa-circle-info"></i>
+      &nbsp;
+      My information
+    </a>
+  {% endif %}
+
+  {% if active == 'all_orders' %}
+    <a class="list-group-item active" href="{% url 'all_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      All orders
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'all_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      All orders 
+    </a>
+  {% endif %}
+
+  {% if active == 'address' %}
+    <a class="list-group-item active" href="{% url 'account_address' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      List addresses
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'account_address' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      List addresses
+    </a>
+  {% endif %}
+
+  {% if active == 'wait_for_confirm_orders' %}
+    <a class="list-group-item active" href="{% url 'wait_for_confirm_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Wait for confirmation
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'wait_for_confirm_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Wait for confirmation
+    </a>
+  {% endif %}
+
+  {% if active == 'waiting_orders' %}
+    <a class="list-group-item active" href="{% url 'waiting_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Waiting for delivery
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'waiting_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Waiting for delivery
+    </a>
+  {% endif %}
+
+  {% if active == 'delivering_orders' %}
+    <a class="list-group-item active" href="{% url 'delivering_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Delivering
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'delivering_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Delivering
+    </a>
+  {% endif %}
+
+  {% if active == 'delivered_orders' %}
+    <a class="list-group-item active" href="{% url 'delivered_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Delivered
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'delivered_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Delivered
+    </a>
+  {% endif %}
+  </a>
+
+  {% if active == 'canceled_orders' %}
+    <a class="list-group-item active" href="{% url 'canceled_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Canceled
+    </a>
+  {% else %}
+    <a class="list-group-item" href="{% url 'canceled_orders' %}">
+      <i class="fa-solid fa-book"></i>
+      &nbsp;
+      Canceled
+    </a>
+  {% endif %}
+
+  <a class="list-group-item" href="#">
+    <i class="fa-solid fa-gear"></i>
+    &nbsp;
+    Settings
+  </a>
+
+</ul>
+<br>
+<a class="btn btn-light btn-block" href="{% url 'change_password' %}">
+  <i class="fa-solid fa-pencil"></i>
+  <span class="text">Change password</span>
+</a>
+<br>
+<a class="btn btn-light btn-block" href="{% url 'logout' %}">
+  <i class="fa fa-power-off"></i>
+  <span class="text">Log out</span>
+</a>
