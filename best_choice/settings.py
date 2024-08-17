@@ -61,6 +61,7 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.storage.ManifestStaticFilesStorage',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -145,6 +146,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static' 
 STATICFILES_DIRS = ['best_choice/static']
 
+
+STATICFILES_STORAGE = 'whitenoise.storage.ManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
