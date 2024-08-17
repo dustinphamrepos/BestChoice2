@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+import environ
 import django_heroku # type: ignore
 from pathlib import Path
 from django.contrib.messages import constants as messages
@@ -37,6 +38,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+
+env = environ.Env()
+environ.Env.read_env()
 # Application definition
 
 INSTALLED_APPS = [
